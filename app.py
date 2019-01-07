@@ -30,7 +30,10 @@ def history():
     d = {}
     record = session.query(FlashRecord).all()
     for r in record:
-        d[str(r.date)] = r.times;
+        x = str(r.date)[4:]
+        x = x[4:6] + ' ' + x[0:3] + ' ' + x[-4:]
+        print(x)
+        d[x] = r.times    
     return render_template('historypage.html',record = d)
 
 

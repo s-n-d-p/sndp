@@ -10,11 +10,14 @@
 <body>
     <h1>History</h1>
     <div>
-        <div>Date</div>
-        <div>Times</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Times</div>
+        ---------------------------
     </div>
 
-    {{record}}
+    {% for x in record %}
+        {{x}}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{record[x]}}<br>
+    {% endfor %}
+
 </body>
 
 </html>

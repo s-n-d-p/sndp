@@ -8,9 +8,18 @@ html {
     height: 100%; 
     overflow: hidden;
     color: white;
+    font-size: 20px;
 }
 
 body {           
     height:100%;
     overflow: scroll;
+}
+
+main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 1em;
 }
