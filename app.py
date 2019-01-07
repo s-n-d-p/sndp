@@ -18,7 +18,6 @@ def homepage():
     if date[0] != '0':
         date = '0' + date
     todays_date = ' '.join([day, month, date, year])
-    print(type(todays_date))
     entry = session.query(FlashRecord).filter_by(date = unicode(todays_date)).first()
     count = 0
     if entry:
@@ -32,7 +31,6 @@ def history():
     for r in record:
         x = str(r.date)[4:]
         x = x[4:6] + ' ' + x[0:3] + ' ' + x[-4:]
-        print(x)
         d[x] = r.times    
     return render_template('historypage.html',record = d)
 

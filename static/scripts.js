@@ -14,6 +14,3 @@ function getDate(){
     elem.innerText = (new Date()).toDateString();
 }
 
-function myFunc(vars){
-    return vars;
-}

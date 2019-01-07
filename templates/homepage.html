@@ -12,6 +12,10 @@
                 times: Number(elem.innerText),
                 date: (new Date()).toDateString()
             });
+            document.getElementById("message").innerText = "Updated!"
+            setTimeout(function(){
+            	document.getElementById("message").innerText = "";
+            },2000);
         }
     </script>
     <title>Flash Monitor</title>
@@ -23,8 +27,8 @@
     <button onclick="decrement()">-</button>
     <span id="count">{{count}}</span>
     <button onclick="increment()">+</button><br>
-    <button onclick="save()">Save</button>
-
+    <button onclick="save()">Save</button><br>
+    <span id="message"></span>
     <script>
         getDate();
     </script>
