@@ -8,3 +8,8 @@ function increment() {
     var count = Number(elem.innerText);
     elem.innerText = count + 1;
 }
+
+function getDate(){
+    var elem = document.getElementById("date");
+    elem.innerText = (new Date()).toDateString();
+}

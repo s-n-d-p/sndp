@@ -3,15 +3,31 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="../static/styles.css">    
-    <script src="../static/scripts.js"></script>    
+    <script src="../static/scripts.js"></script>  
+    <script src="../static/jquery.min.js"></script>    
+    <script>
+        function save(){
+            var elem = document.getElementById("count");
+            $.post( "", {
+                times: Number(elem.innerText),
+                date: (new Date()).toDateString()
+            });
+        }
+    </script>
     <title>Flash Monitor</title>
 </head>
 
 <body>
+    <input type="button" onclick="location.href='/history';" value="View History"/>
+    <h6 id="date"></h6>
     <button onclick="decrement()">-</button>
-    <p id="count">0</p>
-    <button onclick="increment()">+</button>
+    <span id="count">{{count}}</span>
+    <button onclick="increment()">+</button><br>
     <button onclick="save()">Save</button>
+
+    <script>
+        getDate();
+    </script>
 </body>
 
 </html>
