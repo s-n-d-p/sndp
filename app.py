@@ -40,6 +40,7 @@ def history():
 @app.route('/', methods = ['POST'])
 def get_javascript_data():
     date = str(request.form['date'])
+    print(date)
     times = int(str(request.form['times']))
     newEntry = FlashRecord(date=date, times=times)
 
