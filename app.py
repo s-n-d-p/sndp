@@ -32,7 +32,9 @@ def history():
         x = str(r.date)[4:]
         x = x[4:6] + ' ' + x[0:3] + ' ' + x[-4:]
         d[x] = r.times    
-    return render_template('historypage.html',record = d)
+    keylist = d.keys()
+    keylist.sort()
+    return render_template('historypage.html',record = d, keylist = keylist)
 
 
 @app.route('/', methods = ['POST'])
