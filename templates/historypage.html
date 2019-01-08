@@ -14,7 +14,7 @@
         ---------------------------
     </div>
 
-    {% for x in record %}
+    {% for x in sorted(record.keys()) %}
         {{x}}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{record[x]}}<br>
     {% endfor %}
 
